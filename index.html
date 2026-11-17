@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HA Image Remover</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">HA <span>Image Remover</span></div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#tools">Tools</a>
+        <a href="#upload">Upload</a>
+    </nav>
+    <button class="nav-btn" onclick="document.getElementById('fileInput').click()">
+        Get Started
+    </button>
+</header>
+
+<section class="hero">
+    <div class="tag">AI IMAGE EDITING STUDIO</div>
+    <h1>Remove Backgrounds.<br>
+        <span>Create Something Amazing.</span>
+    </h1>
+    <p>Make your images clean, professional and ready to use.</p>
+
+    <div class="hero-buttons">
+        <button onclick="document.getElementById('fileInput').click()">
+            Upload Image ↗
+        </button>
+        <a href="#tools" class="secondary-btn">Explore Tools</a>
+    </div>
+</section>
+
+<section class="upload-section" id="upload">
+    <div class="upload-card">
+        <div class="upload-icon">↑</div>
+        <h2>Upload Your Image</h2>
+        <p>Drag your image here or select from your device</p>
+
+        <input type="file" id="fileInput"
+        accept="image/png,image/jpeg,image/webp" hidden>
+
+        <button onclick="document.getElementById('fileInput').click()">
+            Choose Image
+        </button>
+
+        <small>Supports JPG, PNG and WEBP</small>
+    </div>
+
+    <div class="preview" id="preview">
+        <h2>Your Uploaded Image</h2>
+        <img id="previewImage" alt="Image preview">
+  <div class="preview-buttons">
+    <button id="downloadOriginalBtn">Download Original</button>
+    <button class="remove-btn" id="removeBgBtn">Remove Background</button>
+    <button id="downloadProcessedBtn" disabled>
+        Download Processed
+    </button>
+    <button id="removeBtn">Remove Image</button>
+</div>
+        <p id="imageStatus">Image uploaded successfully.</p>
+    </div>
+
+<div class="edit-tools">
+    <h3>Image Editor</h3>
+
+    <div class="resize-inputs">
+        <label>
+            Width (px)
+            <input type="number" id="imageWidth" placeholder="Width">
+        </label>
+
+        <label>
+            Height (px)
+            <input type="number" id="imageHeight" placeholder="Height">
+        </label>
+    </div>
+
+    <button id="resizeBtn">Resize Image</button>
+    <button id="cropBtn">Crop Center</button>
+
+    <p id="editStatus">Choose width and height to resize your image.</p>
+</div>
+</section>
+
+<section class="tools-section" id="tools">
+    <div class="section-heading">
+        <span>OUR FEATURES</span>
+        <h2>Everything You Need</h2>
+        <p>Simple tools for better images.</p>
+    </div>
+
+    <div class="tools-grid">
+        <div class="tool-card">
+            <div class="tool-icon">✂</div>
+            <h3>Background Remover</h3>
+            <p>Remove image backgrounds using an AI service.</p>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-icon">✦</div>
+            <h3>AI Image Editor</h3>
+            <p>Transform images with creative editing tools.</p>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-icon">◈</div>
+            <h3>Image Enhancer</h3>
+            <p>Improve image quality with supported AI tools.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="logo">HA <span>Image Remover</span></div>
+    <p>© 2026 HA Image Remover. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
